@@ -1,0 +1,209 @@
+{
+	"suppliers": [{
+			"name": "Example Company",
+			"number": "01741 858 585",
+			"services": [
+				"Service 1", "Service 2", "Service 3"
+			],
+			"areas": [
+				"Berkshire", "Middlesex", "Buckinghamshire", "Surrey"
+			],
+			"notes": [
+				"",
+				"",
+				""
+			],
+			"rating": {
+				"num_issues_reported": 0,
+				"price": 0,
+				"num_times_on_stop": 0,
+				"avalibility": 0
+			},
+			"status": "account"
+		},
+		{
+			"name": "Example Company 2",
+			"number": "01741 858 582",
+			"services": [
+				"Service 1", "Service 2", "Service 3"
+			],
+			"areas": [
+				"London"
+			],
+			"notes": [
+				"",
+				"",
+				""
+			],
+			"rating": {
+				"num_issues_reported": 0,
+				"price": 0,
+				"num_times_on_stop": 0,
+				"avalibility": 0
+			},
+			"status": "account"
+		},
+		{
+			"name": "Example Company 3",
+			"number": "01741 858 666",
+			"services": [
+				"Service 1", "Service 2", "Service 3"
+			],
+			"areas": [
+				"Bedfordshire",
+				"Berkshire",
+				"Bristol",
+				"Buckinghamshire",
+				"Cambridgeshire",
+				"Cheshire",
+				"City of London",
+				"Cornwall",
+				"County Durham",
+				"Cumbria",
+				"Derbyshire",
+				"Devon",
+				"Dorset",
+				"East Riding of Yorkshire",
+				"East Sussex",
+				"Essex",
+				"Gloucestershire",
+				"Greater London",
+				"Greater Manchester",
+				"Hampshire",
+				"Herefordshire",
+				"Hertfordshire",
+				"Isle of Wight",
+				"Kent",
+				"Lancashire",
+				"Leicestershire",
+				"Lincolnshire",
+				"Merseyside",
+				"Norfolk",
+				"North Yorkshire",
+				"Northamptonshire",
+				"Northumberland",
+				"Nottinghamshire",
+				"Oxfordshire",
+				"Rutland",
+				"Shropshire",
+				"Somerset",
+				"South Yorkshire",
+				"Staffordshire",
+				"Suffolk",
+				"Surrey",
+				"Tyne and Wear",
+				"Warwickshire",
+				"West Midlands",
+				"West Sussex",
+				"West Yorkshire",
+				"Wiltshire",
+				"Worcestershire"
+			],
+			"notes": [
+				"",
+				"",
+				""
+			],
+			"rating": {
+				"num_issues_reported": 0,
+				"price": 0,
+				"num_times_on_stop": 0,
+				"avalibility": 0
+			},
+			"status": "Account"
+		},
+		{
+			"name": "Example Company 4",
+			"number": "01741 858 600",
+			"services": [
+				"Service 1", "Service 2", "Service 3"
+			],
+			"areas": [
+				"Buckinghamshire",
+				"Derbyshire",
+				"Gloucestershire",
+				"Herefordshire",
+				"Leicestershire",
+				"Nottinghamshire",
+				"Oxfordshire",
+				"Staffordshire",
+				"West Midlands",
+				"Wiltshire"
+			],
+			"notes": [
+				"",
+				"",
+				""
+			],
+			"rating": {
+				"num_issues_reported": 0,
+				"price": 0,
+				"num_times_on_stop": 0,
+				"avalibility": 0
+			},
+			"status": "Cash account"
+		},
+		{
+			"name": "Example Company 5",
+			"number": "01741 540 450",
+			"services": [
+				"Service 1", "Service 2", "Service 3"
+			],
+			"areas": [
+				"Hampshire",
+				"Surrey",
+				"Sussex",
+				"East Sussex",
+				"West Sussex",
+				"London",
+				"City of London",
+				"Greater London",
+				"Kent",
+				"Essex",
+				"Wiltshire",
+				"Berkshire",
+				"Middlesex ",
+				"Buckinghamshire",
+				"Oxfordshire",
+				"Hertfordshire"
+			],
+			"notes": [
+				"",
+				"",
+				""
+			],
+			"rating": {
+				"num_issues_reported": 0,
+				"price": 0,
+				"num_times_on_stop": 0,
+				"avalibility": 0
+			},
+			"status": "Account"
+		},
+		{
+			"name": "Example Company 6",
+			"number": "01741 900 000",
+			"services": [
+				"Service 1", "Service 2", "Service 3"
+			],
+			"areas": [
+				"London",
+				"Greater London",
+				"City of London",
+				"Essex"
+			],
+			"notes": [
+				"",
+				"",
+				""
+			],
+			"rating": {
+				"num_issues_reported": 0,
+				"price": 25,
+				"num_times_on_stop": 0,
+				"avalibility": 0
+			},
+			"status": "Account"
+		}
+	]
+}
