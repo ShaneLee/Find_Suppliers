@@ -41,13 +41,13 @@ function showSuppliers(jsonObj) {
 
     for (var j = 0; j < services.length; j++) {
       var service = services[j];
-      if (service !== serviceSelected) {
+      if (service.toUpperCase() !== serviceSelected.toUpperCase()) {
        continue;
       }
       else {
           for (var k = 0; k < areas.length; k++) {
             var area = areas[k];
-            if (area !== areaSelected) {
+            if (area.toUpperCase() !== areaSelected.toUpperCase()) {
               continue;
             }
             else {
