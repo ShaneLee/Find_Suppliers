@@ -2,7 +2,7 @@ let count = 0;
 
 function loadJSon() {
   var request = new XMLHttpRequest();
-  var requestURL = 'data.json';
+  var requestURL = '/suppliersTest.json';
   request.open('GET', requestURL);
   request.responseType = 'json';
   request.send();
@@ -32,12 +32,14 @@ function showSuppliers(jsonObj) {
   sortSuppliers(suppliers);
   divToHide.className = "hide";
   for (var i = 0; i < suppliers.length; i++) {
+    // var supplier_id = suppliers[i].supplier_id;
     var supplierName = suppliers[i].name;
     var number = suppliers[i].number;
     var services = suppliers[i].services;
     var areas = suppliers[i].areas;
     var status = suppliers[i].status;
     var notes = suppliers[i].notes;
+    var stop = suppliers[i].stop;
 
     for (var j = 0; j < services.length; j++) {
       var service = services[j];
@@ -57,11 +59,14 @@ function showSuppliers(jsonObj) {
               listItem.className = "list";
               container.appendChild(listItem);
               if (note != "") {
-                listItem.innerHTML = supplierName + " - " + number + " " +
+                listItem.innerHTML = upperCaseFirstLetter(lowerCaseAllWordsExceptFirstLetters(supplierName)) + " - " + number + " " +
                 captialiseFirstLetter(status) + "<br /><br />" + note;
               }
               else {
-                listItem.innerHTML = supplierName + " - " + number + " " +
+                // issue_link = " <a href='../issue/" + supplier_id + "'>Report Error</a>"
+                listItem.innerHTML = upperCaseFirstLetter(
+                  lowerCaseAllWordsExceptFirstLetters(supplierName)) +
+                   " - " + number + " " +
                 captialiseFirstLetter(status);
               }
 
@@ -70,7 +75,21 @@ function showSuppliers(jsonObj) {
       }
     }
   }
-  console.log(count + " suppliers sourced");
+  var summary = document.createElement("li");
+  summary.className = "list";
+  container.insertBefore(summary, container.childNodes[0]);
+  summary.innerHTML = "Searched for: " + serviceSelected +
+   "<br /> Area: " + areaSelected + "<br /> " + count + " suppliers sourced";
+}
+
+function upperCaseFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+}
+
+function lowerCaseAllWordsExceptFirstLetters(string) {
+    return string.replace(/\w\S*/g, function (word) {
+        return word.charAt(0) + word.slice(1).toLowerCase();
+    });
 }
 
 
@@ -89,7 +108,9 @@ function sortSuppliers(notSorted) {
     if (i > 0) {
       if (notSorted[i].overall_rating != notSorted[i-1].overall_rating) {
 
-          notSorted.sort(function(a,b) {return (a.overall_rating > b.overall_rating) ? -1 : ((b.overall_rating > a.overall_rating) ? 1 : 0);} );
+          notSorted.sort(function(a,b)
+          {return (a.overall_rating > b.overall_rating) ? -1 :
+            ((b.overall_rating > a.overall_rating) ? 1 : 0);} );
 
       }
     }
@@ -107,17 +128,6 @@ function calculateAverage(a, b, c, d) {
   return (a + b + c + d) / 4;
 }
 
-function printSuppliers() {
-
-  var service = document.getElementById("service").value;
-  var area = document.getElementById("area").value;
-
-  var output = "Suppliers for " + service + " in " + area + ": <br />" +
-    "Test supplier - 01753 693 001 <br /><br /><br />Second Supplier - " +
-    " 01258 654 500<br /><br /><br /> Third Supplier - 0121 852 4668";
-
-  document.write(output);
-}
 
 function captialiseFirstLetter(string) {
   return string.charAt(0).toUpperCase() + string.slice(1);
