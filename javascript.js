@@ -2,7 +2,7 @@ let count = 0;
 
 function loadJSon() {
   var request = new XMLHttpRequest();
-  var requestURL = '/suppliersTest.json';
+  var requestURL = 'data.json';
   request.open('GET', requestURL);
   request.responseType = 'json';
   request.send();
